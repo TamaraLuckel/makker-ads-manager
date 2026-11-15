@@ -1,0 +1,8 @@
+{
+  "regions": ["fra1"],
+  "git": { "deploymentEnabled": false },
+  "functions": {
+    "api/ads.js": { "maxDuration": 300, "includeFiles": "{merk/*.json,app/sjablonen.js}" },
+    "api/beeld.js": { "maxDuration": 30 }
+  }
+}

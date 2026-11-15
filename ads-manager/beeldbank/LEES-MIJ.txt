@@ -1,0 +1,1 @@
+Hier komen je eigen foto's (via node scripts/beeldbank.mjs "<map>").

@@ -1,0 +1,4 @@
+{
+  "uitleg": "Je eigen foto's, de enige bron voor beeld in je ads (geen stock, geen AI-beeld). 'pos' is de beste uitsnede per formaat: gezichten in beeld, ruimte voor tekst. Vullen: node scripts/beeldbank.mjs <map>, daarna beschrijft Claude Code elke foto.",
+  "fotos": []
+}

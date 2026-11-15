@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huisstijl voor je ads</title>
+<style>
+:root { --bg: #F6F4EF; --kaart: #fff; --lijn: #E6E1D6; --tekst: #1E1E1E; --grijs: #6B675F; --accent: #2B4C7E; color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--tekst); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 36px 24px 120px; }
+header h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.1; margin: 0 0 10px; }
+header p { max-width: 680px; color: var(--grijs); margin: 0; }
+section { background: var(--kaart); border: 1px solid var(--lijn); border-radius: 18px; padding: 22px 24px; margin-top: 18px; }
+section h2 { font-size: 19px; margin: 0 0 4px; display: flex; gap: 10px; align-items: center; }
+section h2 span { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 28px; }
+section > p { color: var(--grijs); margin: 2px 0 16px; font-size: 15px; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; }
+label small { font-weight: 400; color: var(--grijs); }
+input[type=text], textarea, select { font: 400 15px system-ui, sans-serif; padding: 10px 12px; border: 1px solid var(--lijn); border-radius: 10px; background: #fff; width: 100%; color: var(--tekst); }
+.rij { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.kleur { flex-direction: row; align-items: center; gap: 12px; font-weight: 400; border: 1px solid var(--lijn); border-radius: 12px; padding: 10px 12px; }
+.kleur input { width: 44px; height: 44px; border: 0; padding: 0; background: none; cursor: pointer; flex: 0 0 44px; }
+.kleur b { display: block; font-size: 14px; } .kleur small { display: block; font-size: 12px; }
+.paren { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.paar { border: 1px solid var(--lijn); background: #fff; border-radius: 12px; padding: 10px 14px; cursor: pointer; text-align: left; font: inherit; color: inherit; }
+.paar b { display: block; font-size: 20px; line-height: 1.1; font-weight: 700; } .paar small { color: var(--grijs); font-size: 12px; }
+.paar.aan { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent); }
+.stalen { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.staal { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--lijn); cursor: pointer; }
+.fotos { display: flex; gap: 8px; flex-wrap: wrap; }
+.fotos button { width: 72px; height: 72px; border-radius: 10px; overflow: hidden; border: 2px solid transparent; padding: 0; cursor: pointer; background: var(--lijn); }
+.fotos button.aan { border-color: var(--accent); } .fotos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.knop { display: inline-flex; align-items: center; gap: 6px; font: 600 15px system-ui, sans-serif; padding: 11px 20px; border-radius: 99px; border: 1.5px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+.knop.rand { background: transparent; color: var(--accent); }
+.schakel { display: inline-flex; background: var(--bg); border: 1px solid var(--lijn); border-radius: 99px; padding: 3px; margin-bottom: 14px; }
+.schakel a { padding: 6px 14px; border-radius: 99px; cursor: pointer; font-size: 14px; } .schakel a.aan { background: var(--accent); color: #fff; }
+.sjablonen { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.sj { border: 1px solid var(--lijn); border-radius: 14px; padding: 10px; background: var(--bg); }
+.sj.uit { opacity: .55; }
+.vb { position: relative; width: 100%; overflow: hidden; border-radius: 10px; background: #111; }
+.vb iframe { position: absolute; top: 0; left: 0; border: 0; transform-origin: top left; pointer-events: none; }
+.sj label.vink { flex-direction: row; align-items: center; gap: 8px; margin-top: 10px; }
+.sj p { font-size: 13px; color: var(--grijs); margin: 4px 0 8px; }
+.sj textarea { font-size: 13px; }
+.keus { display: flex; gap: 10px; flex-wrap: wrap; } .keus label { flex-direction: row; align-items: center; gap: 6px; font-weight: 400; border: 1px solid var(--lijn); border-radius: 99px; padding: 6px 14px; cursor: pointer; }
+.twee { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.klaar { position: sticky; bottom: 16px; margin-top: 22px; background: #1E1E1E; color: #fff; border-radius: 18px; padding: 16px 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
+.klaar p { margin: 0; font-size: 14px; color: #ddd; max-width: 620px; }
+.klaar .knop { background: #fff; color: #1E1E1E; border-color: #fff; }
+.melding { font-size: 14px; color: #1E7A43; margin-top: 8px; }
+@media (max-width: 700px) { .wrap { padding: 24px 16px 140px; } section { padding: 18px 16px; } .twee { grid-template-columns: 1fr; } .sjablonen { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Hoe moeten jouw ads eruitzien?</h1>
+    <p>Kies je kleuren, letters, logo en de soorten ads die je wilt. Alles wat je kiest zie je meteen terug in echte voorbeelden, met je eigen foto's. Klaar? Download je keuzes onderaan en zeg in de terminal dat je klaar bent.</p>
+  </header>
+
+  <section>
+    <h2><span>1</span>Je naam</h2>
+    <p>Zo heet je pagina in de voorvertoning, en zo noemt Claude je bedrijf.</p>
+    <label>Naam van je bedrijf<input type="text" id="naam"></label>
+  </section>
+
+  <section>
+    <h2><span>2</span>Logo</h2>
+    <p>Het logo komt klein bovenaan op elke ad, over de foto. Een lichte of witte versie (png met transparante achtergrond, of svg) werkt het best. Geen logo mag ook.</p>
+    <div class="twee">
+      <label>Logo voor op de foto<input type="file" id="logo" accept="image/png,image/svg+xml,image/jpeg"><small id="logoNaam"></small></label>
+      <label>Hoogte van het logo<input type="range" id="logoHoogte" min="18" max="80" value="30"><small>Schuif tot het goed oogt in de voorbeelden.</small></label>
+    </div>
+    <div class="stalen" id="logoStalen"></div>
+    <label style="margin-top:12px;flex-direction:row;align-items:center;gap:8px;font-weight:400"><input type="checkbox" id="geenLogo"> Geen logo op mijn ads</label>
+  </section>
+
+  <section>
+    <h2><span>3</span>Kleuren</h2>
+    <p>Zes kleuren, elk met een eigen taak. Klik op een vlak om te kiezen. Heb je een logo gekozen, dan staan de kleuren daaruit hierboven klaar als stalen.</p>
+    <div class="rij" id="kleuren"></div>
+  </section>
+
+  <section>
+    <h2><span>4</span>Letters</h2>
+    <p>Een letter voor de grote koppen en een voor de kleine tekst. Kies een combinatie of stel zelf samen (elke naam van <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a> werkt). Heb je eigen merkletters als bestand? Zeg dat in de terminal, dan zet Claude ze erin.</p>
+    <div class="paren" id="paren"></div>
+    <div class="twee">
+      <label>Koppen<input type="text" id="fontKop" list="fontLijst"></label>
+      <label>Tekst<input type="text" id="fontTekst" list="fontLijst"></label>
+    </div>
+    <datalist id="fontLijst"></datalist>
+  </section>
+
+  <section>
+    <h2><span>5</span>Welke ads wil je?</h2>
+    <p>Vijf vormen, elk sterk in iets anders. Vink aan wat bij je past en schrijf erbij wat je anders wilt. Kies hier ook een foto om mee te kijken.</p>
+    <div class="fotos" id="fotos"></div>
+    <label style="margin:12px 0 16px;max-width:360px">Of probeer een andere foto<input type="file" id="eigenFoto" accept="image/*"></label>
+    <div class="schakel"><a data-fmt="4x5" class="aan">4:5 feed</a><a data-fmt="9x16">9:16 stories</a></div>
+    <div class="sjablonen" id="sjablonen"></div>
+  </section>
+
+  <section>
+    <h2><span>6</span>Hoe klink je?</h2>
+    <p>Claude schrijft de eerste versie van je ads. Hoe beter het weet hoe jij praat, hoe minder je hoeft te herschrijven.</p>
+    <div class="keus" style="margin-bottom:14px"><label><input type="radio" name="aanspreek" value="je" checked> Ik zeg je</label><label><input type="radio" name="aanspreek" value="u"> Ik zeg u</label>
+      <label><input type="checkbox" id="emoji" checked> Emoji mag</label></div>
+    <div class="twee">
+      <label>Zo klink ik (een paar woorden)<input type="text" id="klinkt" placeholder="warm, direct, met humor, nooit zweverig"></label>
+      <label>Dit zeg ik nooit<input type="text" id="nooit" placeholder="gamechanger, unlock, gewoon, ..."></label>
+    </div>
+    <label style="margin-top:14px">Plak een tekst van jezelf die je goed vindt (een post, een mail)<textarea id="voorbeeld" rows="5"></textarea></label>
+  </section>
+
+  <section>
+    <h2><span>7</span>Ads die je mooi vindt</h2>
+    <p>Plak links naar ads of posts van anderen die je aanspreken, en zeg wat je eraan goed vindt. Screenshots kun je in de map <b>voorbeelden</b> zetten; Claude kijkt ze na en stelt aanpassingen voor.</p>
+    <textarea id="voorbeelden" rows="4" placeholder="https://… : ik hou van de rust en die ene grote zin"></textarea>
+  </section>
+
+  <div class="klaar">
+    <p><b>Klaar?</b> Download je keuzes. Het bestand komt in je Downloads; zeg daarna in de terminal: <i>"klaar met de huisstijl"</i>.</p>
+    <button class="knop" id="download" type="button">Download huisstijl.json</button>
+  </div>
+  <p class="melding" id="melding"></p>
+</div>
+
+<script src="app/sjablonen.js"></script>
+<script src="merk/voor-kiezer.js" onerror="window.VOOR_KIEZER = window.VOOR_KIEZER || null"></script>
+<script>
+(function () {
+  'use strict';
+  const S = window.SJABLONEN;
+  const esc = S.esc;
+  const start = (window.VOOR_KIEZER && window.VOOR_KIEZER.huisstijl) || {};
+  const H = S.huisstijl(start);
+  H.toon = Object.assign({ aanspreek: 'je', klinkt: '', nooit: '', voorbeeld: '', emoji: true }, start.toon || {});
+  H.sjablonen = start.sjablonen && start.sjablonen.length ? start.sjablonen.slice() : Object.keys(S.SJ);
+  H.opmerkingen = Object.assign({}, start.opmerkingen || {});
+  let logoData = null;
+  const bank = ((window.VOOR_KIEZER && window.VOOR_KIEZER.beeldbank) || []).map((f) => f.pad);
+  let foto = bank[0] || '';
+  let fmt = '4x5';
+  const url = (p) => p;
+  const $ = (s) => document.querySelector(s);
+
+  // 1. Naam
+  $('#naam').value = H.naam === 'Mijn bedrijf' ? '' : H.naam;
+  $('#naam').oninput = (e) => { H.naam = e.target.value || 'Mijn bedrijf'; };
+
+  // 2. Logo
+  if (H.logo && H.logo.hoogte) $('#logoHoogte').value = H.logo.hoogte;
+  if (H.logo && H.logo.pad) $('#logoNaam').textContent = 'Nu: ' + H.logo.pad;
+  $('#geenLogo').checked = !H.logo;
+  $('#logo').onchange = (e) => {
+    const f = e.target.files[0]; if (!f) return;
+    const r = new FileReader();
+    r.onload = () => { logoData = r.result; H.logo = { pad: logoData, hoogte: Number($('#logoHoogte').value) }; $('#geenLogo').checked = false; $('#logoNaam').textContent = f.name; stalenUitLogo(logoData); tekenAlles(); };
+    r.readAsDataURL(f);
+  };
+  $('#logoHoogte').oninput = (e) => { if (H.logo) { H.logo.hoogte = Number(e.target.value); tekenAlles(); } };
+  $('#geenLogo').onchange = (e) => { if (e.target.checked) H.logo = null; else if (logoData || (start.logo && start.logo.pad)) H.logo = { pad: logoData || start.logo.pad, hoogte: Number($('#logoHoogte').value) }; tekenAlles(); };
+  function stalenUitLogo(src) {
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement('canvas'); c.width = 60; c.height = Math.max(1, Math.round(60 * img.height / img.width));
+      const x = c.getContext('2d'); x.drawImage(img, 0, 0, c.width, c.height);
+      const d = x.getImageData(0, 0, c.width, c.height).data, tel = {};
+      for (let i = 0; i < d.length; i += 4) { if (d[i + 3] < 200) continue; const k = [d[i], d[i + 1], d[i + 2]].map((v) => Math.round(v / 24) * 24).map((v) => Math.min(255, v)); const sleutel = '#' + k.map((v) => v.toString(16).padStart(2, '0')).join(''); tel[sleutel] = (tel[sleutel] || 0) + 1; }
+      const top = Object.entries(tel).sort((a, b) => b[1] - a[1]).slice(0, 6).map((e) => e[0]);
+      $('#logoStalen').innerHTML = top.length ? '<small style="color:var(--grijs);font-size:13px;align-self:center">Kleuren uit je logo, klik om als accent te gebruiken:</small>' + top.map((k) => `<button class="staal" style="background:${k}" data-k="${k}" title="${k}"></button>`).join('') : '';
+      document.querySelectorAll('.staal').forEach((b) => { b.onclick = () => { H.kleuren.accent = b.dataset.k; tekenKleuren(); tekenAlles(); }; });
+    };
+    img.src = src;
+  }
+
+  // 3. Kleuren
+  const KLEUR = [['accent', 'Accent', 'je hoofdkleur: vinkjes, prijzen, nadruk'], ['accent2', 'Tweede accent', 'het aanhalingsteken bij reviews'], ['licht', 'Tekst op de foto', 'meestal wit of crème'],
+    ['papier', 'Papier', 'het bonnetje en het lichte label'], ['inkt', 'Inkt', 'tekst op papier'], ['nacht', 'Schaduw', 'het donkere verloop over de foto, zodat tekst leesbaar blijft']];
+  function tekenKleuren() {
+    $('#kleuren').innerHTML = KLEUR.map(([k, n, u]) => `<label class="kleur"><input type="color" data-k="${k}" value="${H.kleuren[k]}"><span><b>${n}</b><small>${u}</small></span></label>`).join('');
+    document.querySelectorAll('#kleuren input').forEach((i) => { i.oninput = () => { H.kleuren[i.dataset.k] = i.value; document.documentElement.style.setProperty('--accent', H.kleuren.accent); tekenAlles(); }; });
+    document.documentElement.style.setProperty('--accent', H.kleuren.accent);
+  }
+  tekenKleuren();
+
+  // 4. Letters
+  const PAREN = [['Klassiek en warm', 'DM Serif Display', 'Work Sans'], ['Modern en strak', 'Inter Tight', 'Inter'], ['Zacht en vriendelijk', 'Fraunces', 'Nunito Sans'],
+    ['Stevig', 'Archivo Black', 'Archivo'], ['Elegant', 'Playfair Display', 'Lato'], ['Redactioneel', 'Libre Caslon Text', 'Source Sans 3'], ['Speels', 'Bricolage Grotesque', 'DM Sans'], ['Rustig', 'Cormorant Garamond', 'Karla']];
+  const LIJST = [...new Set(PAREN.flatMap((p) => [p[1], p[2]]).concat(['Montserrat', 'Poppins', 'Raleway', 'Merriweather', 'Libre Baskerville', 'Space Grotesk', 'Manrope', 'Outfit', 'Lora', 'EB Garamond', 'Josefin Sans', 'Syne', 'Instrument Serif', 'Figtree']))].sort();
+  $('#fontLijst').innerHTML = LIJST.map((f) => `<option value="${f}">`).join('');
+  const naamVan = (f) => (f && (f.google || f.naam)) || '';
+  $('#fontKop').value = naamVan(H.fonts.kop); $('#fontTekst').value = naamVan(H.fonts.tekst);
+  const linkFonts = new Set();
+  function laadFont(n) { if (!n || linkFonts.has(n)) return; linkFonts.add(n); const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(n).replace(/%20/g, '+')}:wght@400;700&display=swap`; document.head.appendChild(l); }
+  function tekenParen() {
+    PAREN.forEach((p) => { laadFont(p[1]); laadFont(p[2]); });
+    $('#paren').innerHTML = PAREN.map((p, i) => `<button type="button" class="paar${naamVan(H.fonts.kop) === p[1] && naamVan(H.fonts.tekst) === p[2] ? ' aan' : ''}" data-i="${i}"><b style="font-family:'${p[1]}'">${esc(p[0])}</b><small style="font-family:'${p[2]}'">${esc(p[1])} + ${esc(p[2])}</small></button>`).join('');
+    document.querySelectorAll('.paar').forEach((b) => { b.onclick = () => { const p = PAREN[b.dataset.i]; H.fonts.kop = { google: p[1] }; H.fonts.tekst = { google: p[2] }; $('#fontKop').value = p[1]; $('#fontTekst').value = p[2]; tekenParen(); tekenAlles(); }; });
+  }
+  tekenParen();
+  let fontTimer = null;
+  ['#fontKop', '#fontTekst'].forEach((id, n) => { $(id).oninput = (e) => { clearTimeout(fontTimer); fontTimer = setTimeout(() => { const v = e.target.value.trim(); if (!v) return; H.fonts[n ? 'tekst' : 'kop'] = { google: v }; tekenParen(); tekenAlles(); }, 500); }; });
+
+  // 5. Sjablonen + foto
+  function tekenFotos() {
+    $('#fotos').innerHTML = bank.length ? bank.map((p) => `<button type="button" class="${p === foto ? 'aan' : ''}" data-p="${esc(p)}"><img src="${esc(p)}" alt=""></button>`).join('') : '<small style="color:var(--grijs)">Nog geen foto\'s in de beeldbank. Kies hieronder een foto om mee te kijken.</small>';
+    document.querySelectorAll('#fotos button').forEach((b) => { b.onclick = () => { foto = b.dataset.p; tekenFotos(); tekenAlles(); }; });
+  }
+  tekenFotos();
+  $('#eigenFoto').onchange = (e) => { const f = e.target.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => { foto = r.result; tekenFotos(); tekenAlles(); }; r.readAsDataURL(f); };
+  document.querySelectorAll('.schakel a').forEach((a) => { a.onclick = () => { fmt = a.dataset.fmt; document.querySelectorAll('.schakel a').forEach((x) => x.classList.toggle('aan', x === a)); tekenAlles(); }; });
+  function tekenSjablonen() {
+    $('#sjablonen').innerHTML = Object.entries(S.SJ).map(([k, sj]) => `<div class="sj${H.sjablonen.includes(k) ? '' : ' uit'}" data-k="${k}"><div class="vb"><iframe title="${esc(sj.naam)}" sandbox="allow-same-origin"></iframe></div>
+      <label class="vink"><input type="checkbox" data-k="${k}"${H.sjablonen.includes(k) ? ' checked' : ''}> ${esc(sj.naam)}</label><p>${esc(sj.uitleg)}</p>
+      <textarea rows="2" data-op="${k}" placeholder="Wat wil je anders?">${esc(H.opmerkingen[k] || '')}</textarea></div>`).join('');
+    document.querySelectorAll('.sj input[type=checkbox]').forEach((c) => { c.onchange = () => { H.sjablonen = Object.keys(S.SJ).filter((k) => document.querySelector(`.sj input[data-k=${k}]`).checked); c.closest('.sj').classList.toggle('uit', !c.checked); }; });
+    document.querySelectorAll('.sj textarea').forEach((t) => { t.oninput = () => { H.opmerkingen[t.dataset.op] = t.value; }; });
+  }
+  tekenSjablonen();
+  let tekenTimer = null;
+  function tekenAlles() {
+    clearTimeout(tekenTimer);
+    tekenTimer = setTimeout(() => {
+      document.querySelectorAll('.sj').forEach((el) => {
+        const o = { sjabloon: el.dataset.k, foto, pos: { '4x5': '50% 40%', '9x16': '50% 40%' }, velden: {} };
+        S.zetVoorbeeld(el.querySelector('iframe'), o, fmt, H, url);
+      });
+    }, 150);
+  }
+  tekenAlles();
+  window.addEventListener('resize', tekenAlles);
+
+  // 6. Toon
+  document.querySelector(`input[name=aanspreek][value=${H.toon.aanspreek === 'u' ? 'u' : 'je'}]`).checked = true;
+  $('#emoji').checked = H.toon.emoji !== false;
+  $('#klinkt').value = H.toon.klinkt || ''; $('#nooit').value = H.toon.nooit || ''; $('#voorbeeld').value = H.toon.voorbeeld || '';
+  $('#voorbeelden').value = start.voorbeelden || '';
+
+  // Download
+  $('#download').onclick = () => {
+    const uit = {
+      naam: H.naam || 'Mijn bedrijf', kleuren: H.kleuren, fonts: H.fonts,
+      logo: H.logo ? { hoogte: H.logo.hoogte || 30, ...(logoData ? {} : { pad: H.logo.pad }), ...(start.logo && start.logo.app ? { app: start.logo.app } : {}) } : null,
+      sjablonen: H.sjablonen.length ? H.sjablonen : Object.keys(S.SJ), opmerkingen: H.opmerkingen,
+      toon: { aanspreek: document.querySelector('input[name=aanspreek]:checked').value, klinkt: $('#klinkt').value.trim(), nooit: $('#nooit').value.trim(), voorbeeld: $('#voorbeeld').value.trim(), emoji: $('#emoji').checked },
+      voorbeelden: $('#voorbeelden').value.trim(),
+    };
+    if (logoData && H.logo) uit.logoData = logoData;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(uit, null, 2)], { type: 'application/json' }));
+    a.download = 'huisstijl.json'; a.click();
+    $('#melding').textContent = 'Gedownload. Zeg in de terminal: "klaar met de huisstijl".';
+  };
+})();
+</script>
+</body>
+</html>

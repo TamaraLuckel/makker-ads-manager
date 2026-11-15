@@ -1,0 +1,12 @@
+{
+  "uitleg": "Producten waarvoor de Ads Manager ads schrijft. 'feiten' is de enige bron voor prijzen, data, cijfers en reviews: Claude verzint niets wat hier niet staat. 'doelPerResultaat' is wat een aanmelding (of aankoop) via ads mag kosten, uit je rekensom; de app waarschuwt als een ad daar ver boven zit. Houd dit bij als prijzen of data veranderen, en deploy daarna opnieuw.",
+  "producten": [
+    {
+      "id": "voorbeeld",
+      "naam": "Voorbeeldproduct (vervang mij)",
+      "url": "https://example.com",
+      "doelPerResultaat": null,
+      "feiten": "Wat het is, voor wie, prijs, data, garantie, en eventueel reviews woordelijk met naam en of die persoon toestemming gaf voor gebruik in een advertentie."
+    }
+  ]
+}
