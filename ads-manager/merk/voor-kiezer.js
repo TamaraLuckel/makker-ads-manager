@@ -1,39 +1,402 @@
 // Gemaakt door de scripts; niet zelf aanpassen.
 window.VOOR_KIEZER = {
   "huisstijl": {
-    "naam": "Mijn bedrijf",
+    "naam": "Makker Hoortoestellen",
     "kleuren": {
-      "accent": "#2B4C7E",
-      "accent2": "#E9A23B",
+      "accent": "#1A2F53",
+      "accent2": "#C3A356",
       "licht": "#FFFFFF",
-      "papier": "#FBF8F1",
-      "inkt": "#1E1E1E",
-      "nacht": "#120E0A"
+      "papier": "#F3F0EC",
+      "inkt": "#2B3A57",
+      "nacht": "#1A2F53"
     },
     "fonts": {
       "kop": {
-        "google": "DM Serif Display"
+        "google": "Caladea"
       },
       "tekst": {
         "google": "Work Sans"
       }
     },
-    "logo": null,
+    "logo": {
+      "pad": "merk/logo.png",
+      "app": "merk/logo-app.png"
+    },
     "sjablonen": [
-      "bon",
       "labels",
       "review",
       "notitie",
       "woord"
     ],
     "toon": {
-      "aanspreek": "je",
-      "klinkt": "",
-      "nooit": "",
-      "voorbeeld": "",
-      "emoji": true
+      "aanspreek": "u",
+      "klinkt": "Makker-merkstem (00-FUNDAMENT/toon.md in de teamkluis): sympathiek eigenwijs, intelligent, adrem, toegankelijk. Doelgroep 65 tot 85 jaar, B1-niveau. Empathisch over gehoorverlies, zonder schuldgevoel; positief afsluiten met een oplossing. Klanten spreken, niet het merk. Kernbelofte: \"Bij Makker Hoortoestellen hoort u niet alleen beter, u wordt ook beter gehoord.\" Lokaal en persoonlijk, nooit als een keten.",
+      "nooit": "Geen prijs, geen korting, geen \"gratis\" (wel \"vrijblijvend\"). Geen medische claims of cijfers over gehoor zonder bron. Nooit de lezer aanspreken op gehoorverlies (\"Hoort u slecht?\") en geen angst-hook. Geen belofte over afspraken of levertijd. Geen em-dashes. Nooit: bovendien, daarnaast, verder, cruciaal, essentieel, dynamisch, naadloos, robuust, showcasen, alignen, een boost geven, naar een hoger niveau tillen, in een wereld waar. Geen \"filiaal\" maar \"winkel\".",
+      "voorbeeld": "Bij Makker Hoortoestellen hoort u niet alleen beter, u wordt ook beter gehoord.",
+      "emoji": false
     },
-    "voorbeelden": ""
+    "voorbeelden": "Voorwaarden Chief of Values 15-11-2026: elke adtekst wordt getoetst door Laurens vóór Tamara's akkoord."
   },
-  "beeldbank": []
+  "beeldbank": [
+    {
+      "pad": "beeldbank/03-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "03_20250328_MakkerHoortoestellen_RebekkaMell_027.jpg",
+      "beschrijving": "Audicien in blauw colbert schudt een vrouw met tas de hand bij de open winkeldeur; warm welkom.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: persoonlijk welkom bij de lokale audicien",
+      "staand": false,
+      "pos": {
+        "4x5": "45% 35%",
+        "9x16": "40% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/04-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "04_20250328_MakkerHoortoestellen_RebekkaMell_029 - kopie.jpg",
+      "beschrijving": "Intakegesprek aan ronde tafel: vrouw in crème vest en audicien met bril, koffie en folders op tafel.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: rustig persoonlijk gesprek, tijd voor de klant",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 40%",
+        "9x16": "55% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/06-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "06_20250328_MakkerHoortoestellen_RebekkaMell_030.jpg",
+      "beschrijving": "Audicien legt iets uit aan een vrouw aan tafel, beiden in gesprek; lichte winkel met houten wand.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "tijd: uitleg en aandacht",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 40%",
+        "9x16": "45% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/12-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "12_20250328_MakkerHoortoestellen_RebekkaMell_036.jpg",
+      "beschrijving": "Jonge audicien in mintgroene trui in gesprek met oudere man in donker colbert aan tafel met karaf.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: deskundig advies voor oudere klant",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "50% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/17-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "17_20250328_MakkerHoortoestellen_RebekkaMell_041.jpg",
+      "beschrijving": "Audicien in roestbruin jasje kijkt vriendelijk naar klant aan een witte tafel met toetsenbord.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: vriendelijke vakvrouw",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 35%",
+        "9x16": "55% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/18-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "18_20250328_MakkerHoortoestellen_RebekkaMell_042.jpg",
+      "beschrijving": "Lachende vrouw in crème vest tegenover de audicien in de testruimte.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: ontspannen eerste afspraak",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 30%",
+        "9x16": "50% 30%"
+      }
+    },
+    {
+      "pad": "beeldbank/20-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "20_20250328_MakkerHoortoestellen_RebekkaMell_044.jpg",
+      "beschrijving": "Audicien zet een koptelefoon op bij een lachende vrouw voor de gehoortest.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: de gehoortest, laagdrempelig",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "45% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/22-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "22_20250328_MakkerHoortoestellen_RebekkaMell_046 - kopie.jpg",
+      "beschrijving": "Vrouw met koptelefoon en drukknop tijdens de gehoortest, glimlachend.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: zo gaat een gehoortest",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 35%",
+        "9x16": "55% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/25-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "25_20250328_MakkerHoortoestellen_RebekkaMell_048.jpg",
+      "beschrijving": "Oudere man in groen colbert drinkt koffie in de testruimte, ontspannen.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "tijd: koffie en geen haast",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "50% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/26-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "26_20250328_MakkerHoortoestellen_RebekkaMell_049.jpg",
+      "beschrijving": "Audicien in roestbruin jasje lacht naar oudere man aan de testtafel.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: persoonlijke audicien",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 35%",
+        "9x16": "55% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/28-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "28_20250328_MakkerHoortoestellen_RebekkaMell_051.jpg",
+      "beschrijving": "Audicien zet een koptelefoon op bij oudere man in groen colbert voor de gehoortest.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: gehoortest bij de audicien",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 30%",
+        "9x16": "50% 30%"
+      }
+    },
+    {
+      "pad": "beeldbank/34-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "34_20250328_MakkerHoortoestellen_RebekkaMell_058.jpg",
+      "beschrijving": "Audicien past een hoortoestel aan bij een oudere man, man kijkt in de ronde spiegel.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: hoortoestel op maat aangepast",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 40%",
+        "9x16": "60% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/40-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "40_20250328_MakkerHoortoestellen_RebekkaMell_064.jpg",
+      "beschrijving": "Audicien en oudere man voor de spiegel, hoortoestel wordt goed gezet.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: zorgvuldig aanpassen",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 35%",
+        "9x16": "55% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/42-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "42_20250328_MakkerHoortoestellen_RebekkaMell_066.jpg",
+      "beschrijving": "Oudere man bekijkt zichzelf in de spiegel met hoortoestel, audicien glimlacht ernaast.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: tevreden met het resultaat",
+      "staand": false,
+      "pos": {
+        "4x5": "45% 35%",
+        "9x16": "40% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/43-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "43_20250328_MakkerHoortoestellen_RebekkaMell_067.jpg",
+      "beschrijving": "Audicien helpt een vrouw met haar hoortoestel voor de spiegel; beiden lachen.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: persoonlijke nazorg",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 35%",
+        "9x16": "55% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/47-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "47_20250328_MakkerHoortoestellen_RebekkaMell_072.jpg",
+      "beschrijving": "Vrouw aan de balie bij de baliemedewerker; bloemen op de balie, lichte winkel.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "tijd: welkom aan de balie",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 40%",
+        "9x16": "40% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/50-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "50_20250328_MakkerHoortoestellen_RebekkaMell_075.jpg",
+      "beschrijving": "Baliemedewerker begroet een vrouw in trenchcoat bij de ingang; ballonnen buiten.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: welkom in een nieuwe winkel",
+      "staand": false,
+      "pos": {
+        "4x5": "45% 35%",
+        "9x16": "40% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/52-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "52_20250328_MakkerHoortoestellen_RebekkaMell_077.jpg",
+      "beschrijving": "Audicien houdt de deur open voor een vrouw met Makker-tas die naar buiten loopt.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: Makker, lokaal en gastvrij",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "45% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/56-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "56_20250328_MakkerHoortoestellen_RebekkaMell_081.jpg",
+      "beschrijving": "Audicien schudt een vrouw met Makker-tas de hand bij de deur, beiden lachen.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: tevreden klant",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "45% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/58-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "58_20250328_MakkerHoortoestellen_RebekkaMell_083.jpg",
+      "beschrijving": "Oudere man in groen colbert lacht in gesprek aan tafel, karaf water op tafel.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: ontspannen gesprek",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 30%",
+        "9x16": "50% 30%"
+      }
+    },
+    {
+      "pad": "beeldbank/60-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "60_20250328_MakkerHoortoestellen_RebekkaMell_085.jpg",
+      "beschrijving": "Oudere man en audicien bij de balie met bloemen, in gesprek.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "tijd: afspraak maken aan de balie",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "50% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/63-20250328-makkerhoortoestellen-rebekka.jpg",
+      "bron": "63_20250328_MakkerHoortoestellen_RebekkaMell_088.jpg",
+      "beschrijving": "Oudere man, vrouw en audicien bij de balie, allen met duim omhoog.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: tevreden klanten",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 30%",
+        "9x16": "50% 30%"
+      }
+    },
+    {
+      "pad": "beeldbank/67-2026-q3-makkers7744.jpg",
+      "bron": "67_2026_Q3_Makkers7744.jpg",
+      "beschrijving": "Klant aan de balie bij een lachende medewerker in een moderne winkel.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "tijd: snel geholpen aan de balie",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 40%",
+        "9x16": "60% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/68-2026-q3-makkers7836.jpg",
+      "bron": "68_2026_Q3_Makkers7836.jpg",
+      "beschrijving": "Twee vrouwen aan de balie: medewerker geeft iets aan een klant in rood vest.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: persoonlijk contact",
+      "staand": false,
+      "pos": {
+        "4x5": "55% 40%",
+        "9x16": "55% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/69-2026-q3-makkers7905.jpg",
+      "bron": "69_2026_Q3_Makkers7905.jpg",
+      "beschrijving": "Medewerker en klant in bordeaux vest in gesprek bij de witte balie.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "tijd: rustig geholpen",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 40%",
+        "9x16": "50% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/71-2026-q3-makkers7989.jpg",
+      "bron": "71_2026_Q3_Makkers7989.jpg",
+      "beschrijving": "Jonge medewerker schudt een vrouw in beige jas de hand bij binnenkomst.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: welkom bij Makker",
+      "staand": false,
+      "pos": {
+        "4x5": "45% 35%",
+        "9x16": "45% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/74-2026-q3-makkers8100.jpg",
+      "bron": "74_2026_Q3_Makkers8100.jpg",
+      "beschrijving": "Man met koptelefoon en drukknop in de testcabine, glimlachend.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: gehoortest",
+      "staand": false,
+      "pos": {
+        "4x5": "45% 35%",
+        "9x16": "45% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/76-2026-q3-makkers8141.jpg",
+      "bron": "76_2026_Q3_Makkers8141.jpg",
+      "beschrijving": "Audicien in lichtblauwe trui aan tafel tegenover klant met koptelefoon, lachend.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: gehoortest met uitleg",
+      "staand": false,
+      "pos": {
+        "4x5": "60% 40%",
+        "9x16": "65% 40%"
+      }
+    },
+    {
+      "pad": "beeldbank/79-2026-q3-makkers8220.jpg",
+      "bron": "79_2026_Q3_Makkers8220.jpg",
+      "beschrijving": "Man met hand achter het oor, half portret, glimlach; close-up staand.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "identiteit: herkenbaar moment van niet goed horen (geen angst-hook)",
+      "staand": false,
+      "pos": {
+        "4x5": "50% 35%",
+        "9x16": "50% 35%"
+      }
+    },
+    {
+      "pad": "beeldbank/86-intakegesprek-2026-q3-makkers7496.jpg",
+      "bron": "86_Intakegesprek_2026_Q3_Makkers7496.jpg",
+      "beschrijving": "Man en vrouw lachen aan tafel tegenover een audicien (rug in beeld) in een warme ruimte.",
+      "wie": "collega of klant; namen en toestemming staan in SharePoint (bevestigd door Tamara 15-11-2026: schriftelijke toestemming voor betaalde ads)",
+      "past": "bewijs: samen met partner naar de audicien",
+      "staand": false,
+      "pos": {
+        "4x5": "60% 35%",
+        "9x16": "65% 35%"
+      }
+    }
+  ]
 };
