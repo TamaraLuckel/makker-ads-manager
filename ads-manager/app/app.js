@@ -123,7 +123,7 @@
   function paneel() {
     return `<details class="kaart paneel" open><summary><span class="label">Nieuwe ads</span><h3>Laat Claude ads schrijven</h3></summary>
       <form id="maakForm" class="form">
-        <label class="breed">Kernboodschap van de campagne: wat moet de lezer onthouden, voor welke winkel of regio, en wanneer?<textarea name="opdracht" rows="3" required placeholder="Bijvoorbeeld: Makker Heerhugowaard opent in december. Een persoonlijke audicien in de buurt, met tijd voor u. Maak vrijblijvend een afspraak voor een hoortest."></textarea></label>
+        <label class="breed">Kernboodschap van de campagne: wat moet de lezer onthouden, voor welke winkel of regio, en wanneer?<textarea name="opdracht" rows="3" required placeholder="Bijvoorbeeld: Makker [plaats] opent op [datum]. Een persoonlijke audicien in de buurt, met tijd voor u. Maak vrijblijvend een afspraak voor een hoortest."></textarea></label>
         <label>Product<select name="product">${data.producten.map((p) => `<option value="${esc(p.id)}">${esc(p.naam)}</option>`).join('')}<option value="">Geen product (losse ad)</option></select></label>
         <div class="breed"><span class="lab">Hoeken, één ad per hoek</span><div class="hoeken">${HOEKEN.map((h, i) => `<label class="hoek"><input type="checkbox" name="hoek" value="${h[0]}"${i < 3 ? ' checked' : ''}><span><b>${h[1]}</b><small>${h[2]}</small></span></label>`).join('')}</div></div>
         <div class="breed"><span class="lab">Foto's om uit te kiezen <small>(niets aangevinkt: Claude kiest uit de hele beeldbank)</small></span>
