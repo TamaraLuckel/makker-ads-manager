@@ -101,7 +101,7 @@
   function uitleg() {
     const pl = data.kan.plafond || { dag: 50, totaal: 500 };
     return `<div class="kaart uitleg"><span class="label">Zo werkt het</span><h3>Van idee tot advertentie</h3><ol>
-      <li><b>Jij geeft de vonk</b>: wat wil je zeggen, aan wie? Je Claude-routine schrijft per hoek een concept met sjabloon en foto, op je eigen Claude-account.</li>
+      <li><b>Jij geeft de kernboodschap van de campagne</b>: wat moet de lezer onthouden, en in welke winkel of regio? Je Claude-routine schrijft per hoek een concept met sjabloon en foto, op je eigen Claude-account.</li>
       <li><b>Jij maakt hem af</b>: tekst, foto, uitsnede en sjabloon wisselen tot het klopt. Bewaar het ontwerp: dan liggen er een 4:5 (feed) en een 9:16 (stories en reels) klaar.</li>
       <li><b>Jouw akkoord</b> op de tekst. Daarna downloaden, of (met Meta gekoppeld) klaarzetten in Meta: alles gepauzeerd, kost niets.</li>
       <li><b>Live zetten</b> is het enige moment waarop geld uitgaat. Je bevestigt bedrag en einddatum, binnen het plafond van ${eur(pl.dag, 0)} per dag en ${eur(pl.totaal, 0)} totaal.</li></ol>
@@ -123,7 +123,7 @@
   function paneel() {
     return `<details class="kaart paneel" open><summary><span class="label">Nieuwe ads</span><h3>Laat Claude ads schrijven</h3></summary>
       <form id="maakForm" class="form">
-        <label class="breed">Waar gaat het over? Jouw vonk: wat wil je zeggen, aan wie, wat heb je meegemaakt?<textarea name="opdracht" rows="3" required placeholder="Bijvoorbeeld: nog één week inschrijven. Ik wil dat ondernemers die nu alles zelf doen voelen dat het lichter kan."></textarea></label>
+        <label class="breed">Kernboodschap van de campagne: wat moet de lezer onthouden, voor welke winkel of regio, en wanneer?<textarea name="opdracht" rows="3" required placeholder="Bijvoorbeeld: Makker Heerhugowaard opent in december. Een persoonlijke audicien in de buurt, met tijd voor u. Maak vrijblijvend een afspraak voor een hoortest."></textarea></label>
         <label>Product<select name="product">${data.producten.map((p) => `<option value="${esc(p.id)}">${esc(p.naam)}</option>`).join('')}<option value="">Geen product (losse ad)</option></select></label>
         <div class="breed"><span class="lab">Hoeken, één ad per hoek</span><div class="hoeken">${HOEKEN.map((h, i) => `<label class="hoek"><input type="checkbox" name="hoek" value="${h[0]}"${i < 3 ? ' checked' : ''}><span><b>${h[1]}</b><small>${h[2]}</small></span></label>`).join('')}</div></div>
         <div class="breed"><span class="lab">Foto's om uit te kiezen <small>(niets aangevinkt: Claude kiest uit de hele beeldbank)</small></span>
